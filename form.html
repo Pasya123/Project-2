@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Pink</title>
+</head>
+<body>
+    
+    <header class="page-header">
+        <a href="" class="page-header__logo-link">PINK</a>
+        <button class="page-header__button-close button">Свернуть меню</button>
+        <nav class="main-nav">
+            <ul class="main-nav__list site-list">
+                <li class="site-list__item">
+                    <a href="index.html">Главная</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="photo.html">Фотографии</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="form.html">Конкурс</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="#">Портфолио</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="competition-main">
+        
+        <h1 class="visually-hidden">Страница конкурса PINK</h1>
+        
+        <section class="competition-intro">
+            <div class="competition-intro__background">
+                <h2 class="competition-intro__heading">Конкурс на самое безбашенное путешествие с Пинк</h2>
+            </div>
+            <p class="competition-intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+        </section>
+        
+        <section class="form-sect">
+            <div class="form-sect__wrapper">
+                <form action="" class="form-sect__form competition-form" method="post">
+                    <fieldset class="competition-form__name-form name-form">
+                        <ul class="competition-form__list form-list">
+                            <li class="form-list__item">
+                            <label for="modal-surname">Фамилия:</label>
+                            <input id="modal-surname" type="text" value="" placeholder="Укажите фамилию *">
+                            </li>
+                            <li class="form-list__item">
+                            <label for="modal-name">Имя:</label>
+                            <input id="modal-name" type="text" value="" placeholder="Введите ваше имя *">
+                            </li>
+                            <li class="form-list__item">
+                            <label for="modal-patronymic">Отчество:</label>
+                            <input id="modal-patronymic" type="text" value="" placeholder="Ну и отчество тоже">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="competition-form__checkbox-form achieve-form">
+                        <legend class="achieve-form__legend form-legend">ваши безбашенные достижения в путешествии</legend>
+                        <ul class="achieve-form__list form-list">
+                            <li class="form-list__item">
+                                <label for="shark-selfie">
+                                    <input type="checkbox" id="shark-selfie">
+                                    Сделал селфи с акулой
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="sunburned">
+                                    <input type="checkbox" id="sunburned">
+                                    Обгорел на пляже
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="chuck-norris">
+                                    <input type="checkbox" id="chuck-norris">
+                                    Видел Чака Норриса
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="souvenirs">
+                                    <input type="checkbox" id="souvenirs">
+                                    Накупил сувениров
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="towerholder">
+                                    <input type="checkbox" id="towerholder">
+                                    Удержал башню
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="hotel-destroyer">
+                                    <input type="checkbox" id="hotel-destroyer">
+                                    Разгромил отел
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="competition-form__contacts-form contacts-form">
+                        <ul class="contacts-form__list form-list">
+                            <li class="form-list__item">
+                                <label for="phone">
+                                    <input type="tel" id="phone">
+                                    номер телефона
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="mail">
+                                    <input type="email" id="mail">
+                                    адрес почты
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="competition-form__radio-form radio-form">
+                        <legend class="radio-form__legend form-legend">с каким приложением путешествовали</legend>
+                        <ul class="radio-form__list form-list">
+                            <li class="form-list__item">
+                                <label for="">
+                                    <input type="radio">
+                                    Pink для iOS
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="">
+                                    <input type="radio">
+                                    Pink для Android
+                                </label>
+                            </li>
+                            <li class="form-list__item">
+                                <label for="">
+                                    <input type="radio">
+                                    Pink для Phone
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="competition-form__post-form post-form">
+                        <label for="emotion">опишите свои эмоции</label>
+                        <textarea id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                    </fieldset>
+                    <button class="filter-button button" type="submit">ОТПРАВИТЬ ФОРМУ</button>
+                </form>
+                <p class="form-sect__legend"><sup>*</sup> - обязательные поля</p>
+            </div>
+        </section>
+        
+        <footer class="competition-footer">
+            <div class="photo-footer__wrapper">
+                <img src="http://placehold.it/147x40" alt="" class="photo-footer__logo-image">
+                <div class="photo-footer__social-container">
+                    <a href="#" class="photo-footer__social-link photo-footer__social-link--twitter"></a>
+                    <a href="#" class="photo-footer__social-link photo-footer__social-link--facebook"></a>
+                    <a href="#" class="photo-footer__social-link photo-footer__social-link--youtube"></a>
+                </div>
+                <span class="photo-footer__on-me-container">
+                    <a href="#" class="photo-footer__on-me-link"></a>
+                </span>
+            </div>
+        </footer>
+        
+    </main>
+    
+</body>
+</html>
