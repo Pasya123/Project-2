@@ -1,0 +1,12 @@
+@import "../../node_modules/normalize.css/normalize";
+    
+html{
+    box-sizing: border-box;
+}
+*,*:after,*:before{
+    box-sizing: inherit;
+}
+
+.header{
+	backround-color: #ccc;
+}
