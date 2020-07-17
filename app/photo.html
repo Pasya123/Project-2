@@ -2,30 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pink</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
    
-   <header class="page-header">
-        <a href="" class="page-header__logo-link">PINK</a>
-        <button class="page-header__button-close button">Свернуть меню</button>
-        <nav class="main-nav">
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                    <a href="index.html">Главная</a>
-                </li>
-                <li class="site-list__item">
-                    <a href="photo.html">Фотографии</a>
-                </li>
-                <li class="site-list__item">
-                    <a href="form.html">Конкурс</a>
-                </li>
-                <li class="site-list__item">
-                    <a href="#">Портфолио</a>
-                </li>
-            </ul>
-        </nav>
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header__inner">
+                <div class="logo">
+                    <a href="" class="page-header__logo-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="22" viewBox="0 0 75 22">
+                            <image id="logotype-white-mobile.svg" width="75" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAWCAYAAACIXmHDAAACr0lEQVRYhdVZi3HbMAwFeh3AG9TdIJmg8QSNJ6g9Qe0J0kygdAKrE8QbOBvInSDqBPEGrwcbdCFaoiSKytXvLnfWhyDxCDwCEQHYoRsKAM8AFgAmFIA8B/CmVu+b3lSbglcA05DNhvFTM89d7DsB+zcVPzoS5eOthYQ7M+BH4D2Lom0TYuaR+13WUjPOEnUc+9E8L4noV8PYT0R0o38CcUqibMnMeR8HAxDbGREtE9mLhhBFRDv1U7AnoqcKWcwcZF5TRRxyUbUBIONeEq1TUvxP2zrGRANRM2Y+fOgzLzMLMXMistH0PcHaS/P7IZTiY6KGqK0jSi56kWWwNr9TOFZ66bfRhb8baojKJTAcURRLlho4p15fYW6wmZuIdZo42G4XNBB1oZ2xkTUKdIFuE6bqwKjoStRQss5pYkM1AeZGw+T43oxFlmpjJ6IoliwAKzNBqpPwCCVeCHMbICfkIuUcdPJBbD4bPx5DRFEMWUpUZm499l5pC5h5XyP4varvEJQoP2K/tmmkrbMmLQuSZ99USxzyhDVWBcy8BSAb8aD3RfBvpXwZYreGqFJ9ctp1Gxoci1Ab07fdaRRy0aymliii3SlQxaKmrWnUyL5pWOrx/vkdq+y1VtGkuz9E8N2hJHooUZprys/NOwuVmgvYNNx7xaaPcmgKxEAEH8CMiF5VjO8BZMwcWmsIB63K3QbIHC/S55qNyAAc/L7XknUYS3+GwhBWqKkVgN9em9QFF0Q5CDEAvkhk6S0hbG/f/a+K0hBqTsjM1nod8bOOKActHbZ6KVG8s/9nuxqy6F9L9KSXE6+ESYWl0chK23VVZNGJsHXqQtiz7xfF50Pl6shSzM3uJ4ceZDNj93ioXCVZuvtLs/tjzOFr5Mp+NEhWN0V8sIiaW2yP+cFCx5+KWqD4Cwkc6Iy9EZq9AAAAAElFTkSuQmCC"/>
+                        </svg>
+                    </a>
+                </div>
+                <nav class="menu">
+                    <button class="page-header__button-close button">Свернуть меню</button>
+                    <ul class="menu__list site-list">
+                        <li class="site-list__item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="photo.html">Фотографии</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="form.html">Конкурс</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="#">Портфолио</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     
     <main class="page-main">
@@ -33,75 +44,194 @@
         <h1 class="visually-hidden">Галерея</h1>
         
         <section class="gallery-intro">
-            <div class="gallety-intro__background">
+            <div class="gallery-intro__background">
                 <h2 class="gallery-intro__heading">Фотографии пользователей</h2>
             </div>
-            <p class="gallery-intro__text">Взгляните на фотографии, которые выкладывают пользлователи! Видите, как не хватает ваших?</p>
+            <div class="container">
+                <p class="gallery-intro__text">Взгляните на фотографии, которые выкладывают пользлователи! Видите, как не хватает ваших?</p>
+            </div>
         </section>
         
         <section class="gallery">
-            <div class="gallery__block">
-                <img src="http://placehold.it/320x140" alt="Фото пользователя" class="gallery__photo gallery__photo--of-the-day">
-                <blockquote class="gallery__comment">
-                    <span class="gallery__autor-container"><cite class="gallery__autor-name">Анна</cite>(5 минут назад)</span>
-                    <p class="gallery__comment-text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <div class="gallery__block gallery__block--of-the-day">
+                <div class="gallery__photo-block">
+                    <img src="../img/panorama-mobile.jpg" alt="Фото пользователя" class="gallery__photo gallery__photo--of-the-day">
+                </div>
+                <blockquote class="gallery__comment comment">
+                    <div class="comment__header">
+                        <div class="comment__username">Анна</div>
+                        <time class="comment__datetime" datetime="2020-07-17T01:27:44+03:00">(5 минут назад)</time>
+                    </div>
+                    <p class="comment__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                    <div class="comment__likes">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="12" viewBox="0 0 13 12">
+                            <image id="icon-heart.svg_copy" data-name="icon-heart.svg copy" width="13" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA0ElEQVQokY2SzRHBcBDFfzIKSAmOjnRAB06u6CAqMCqgg9CBDqQDRgXpgA6YF2/NX8ZMvEsmu+8ju5vebTgHWAIbYMAbNXAEFq3aFjj0LSjdOPk5s0nUHilPSXcgB8bA1cSJRXKuXBsBFxlI9HRjSjfOMsxMy/8QfHiZUxRddAhK8yqJ1h5052F/oXBPvFXm4TWPCnJrC/UuQ/XFq2MmCZUoiKDPiNXLKATNdkMkHBTtYbWl9H4yjHOg46aQUCKlhUBGqn+QJgX2Can5bb66wAu6ADLF16P3EAAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <span class="comment__likes-count">НРАВИТСЯ: 215</span>
+                    </div>
                 </blockquote>
             </div>
             <div class="gallery__block">
-                <img src="http://placehold.it/280x180" alt="Фото пользователя" class="gallery__photo ">
-                <blockquote class="gallery__comment">
-                    <span class="gallery__autor-container"><cite class="gallery__autor-name">Левон</cite>(5 часов назад)</span>
-                    <p class="gallery__comment-text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <div class="gallery__photo-block">
+                    <img src="../img/photo-1-mobile.jpg" alt="Фото пользователя" class="gallery__photo">
+                </div>
+                <blockquote class="gallery__comment comment">
+                    <div class="comment__header">
+                        <div class="comment__username">Левон</div>
+                        <time class="comment__datetime" datetime="2020-07-17T01:27:44+03:00">(5 часов назад)</time>
+                    </div>
+                    <p class="comment__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                    <div class="comment__likes">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="12" viewBox="0 0 13 12">
+                            <image id="icon-heart.svg_copy" data-name="icon-heart.svg copy" width="13" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA0ElEQVQokY2SzRHBcBDFfzIKSAmOjnRAB06u6CAqMCqgg9CBDqQDRgXpgA6YF2/NX8ZMvEsmu+8ju5vebTgHWAIbYMAbNXAEFq3aFjj0LSjdOPk5s0nUHilPSXcgB8bA1cSJRXKuXBsBFxlI9HRjSjfOMsxMy/8QfHiZUxRddAhK8yqJ1h5052F/oXBPvFXm4TWPCnJrC/UuQ/XFq2MmCZUoiKDPiNXLKATNdkMkHBTtYbWl9H4yjHOg46aQUCKlhUBGqn+QJgX2Can5bb66wAu6ADLF16P3EAAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <span class="comment__likes-count">НРАВИТСЯ: 356</span>
+                    </div>
                 </blockquote>
             </div>
             <div class="gallery__block">
-                <img src="http://placehold.it/280x180" alt="Фото пользователя" class="gallery__photo ">
-                <blockquote class="gallery__comment">
-                    <span class="gallery__autor-container"><cite class="gallery__autor-name">Антон</cite>(12 часов назад)</span>
-                    <p class="gallery__comment-text">Соседи будут рады!</p>
+                <div class="gallery__photo-block">
+                    <img src="../img/photo-2-mobile.jpg" alt="Фото пользователя" class="gallery__photo">
+                </div>
+                <blockquote class="gallery__comment comment">
+                    <div class="comment__header">
+                        <div class="comment__username">Антон</div>
+                        <time class="comment__datetime" datetime="2020-07-17T01:27:44+03:00">(12 часов назад)</time>
+                    </div>
+                    <p class="comment__text">Соседи будут рады!</p>
+                    <div class="comment__likes">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="12" viewBox="0 0 13 12">
+                            <image id="icon-heart.svg_copy" data-name="icon-heart.svg copy" width="13" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA0ElEQVQokY2SzRHBcBDFfzIKSAmOjnRAB06u6CAqMCqgg9CBDqQDRgXpgA6YF2/NX8ZMvEsmu+8ju5vebTgHWAIbYMAbNXAEFq3aFjj0LSjdOPk5s0nUHilPSXcgB8bA1cSJRXKuXBsBFxlI9HRjSjfOMsxMy/8QfHiZUxRddAhK8yqJ1h5052F/oXBPvFXm4TWPCnJrC/UuQ/XFq2MmCZUoiKDPiNXLKATNdkMkHBTtYbWl9H4yjHOg46aQUCKlhUBGqn+QJgX2Can5bb66wAu6ADLF16P3EAAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <span class="comment__likes-count">НРАВИТСЯ: 666</span>
+                    </div>
                 </blockquote>
             </div>
             <div class="gallery__block">
-                <img src="http://placehold.it/280x180" alt="Фото пользователя" class="gallery__photo ">
-                <blockquote class="gallery__comment">
-                    <span class="gallery__autor-container"><cite class="gallery__autor-name">Борис</cite>(20 часов назад)</span>
-                    <p class="gallery__comment-text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <div class="gallery__photo-block">
+                    <img src="../img/photo-3-mobile.jpg" alt="Фото пользователя" class="gallery__photo">
+                </div>
+                <blockquote class="gallery__comment comment">
+                    <div class="comment__header">
+                        <div class="comment__username">Борис</div>
+                        <time class="comment__datetime" datetime="2020-07-17T01:27:44+03:00">(20 часов назад)</time>
+                    </div>
+                    <p class="comment__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                    <div class="comment__likes">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="12" viewBox="0 0 13 12">
+                            <image id="icon-heart.svg_copy" data-name="icon-heart.svg copy" width="13" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA0ElEQVQokY2SzRHBcBDFfzIKSAmOjnRAB06u6CAqMCqgg9CBDqQDRgXpgA6YF2/NX8ZMvEsmu+8ju5vebTgHWAIbYMAbNXAEFq3aFjj0LSjdOPk5s0nUHilPSXcgB8bA1cSJRXKuXBsBFxlI9HRjSjfOMsxMy/8QfHiZUxRddAhK8yqJ1h5052F/oXBPvFXm4TWPCnJrC/UuQ/XFq2MmCZUoiKDPiNXLKATNdkMkHBTtYbWl9H4yjHOg46aQUCKlhUBGqn+QJgX2Can5bb66wAu6ADLF16P3EAAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <span class="comment__likes-count">НРАВИТСЯ: 215</span>
+                    </div>
                 </blockquote>
             </div>
             <div class="gallery__block">
-                <img src="http://placehold.it/280x180" alt="Фото пользователя" class="gallery__photo ">
-                <blockquote class="gallery__comment">
-                    <span class="gallery__autor-container"><cite class="gallery__autor-name">Сергей</cite>(25 часов назад)</span>
-                    <p class="gallery__comment-text">Самая кубанская в мире!</p>
+                <div class="gallery__photo-block">
+                    <img src="../img/photo-4-mobile.jpg" alt="Фото пользователя" class="gallery__photo">
+                </div>
+                <blockquote class="gallery__comment comment">
+                    <div class="comment__header">
+                        <div class="comment__username">Сергей</div>
+                        <time class="comment__datetime" datetime="2020-07-17T01:27:44+03:00">(25 часов назад)</time>
+                    </div>
+                    <p class="comment__text">Самая кубанская в мире!</p>
+                    <div class="comment__likes">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="12" viewBox="0 0 13 12">
+                            <image id="icon-heart.svg_copy" data-name="icon-heart.svg copy" width="13" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA0ElEQVQokY2SzRHBcBDFfzIKSAmOjnRAB06u6CAqMCqgg9CBDqQDRgXpgA6YF2/NX8ZMvEsmu+8ju5vebTgHWAIbYMAbNXAEFq3aFjj0LSjdOPk5s0nUHilPSXcgB8bA1cSJRXKuXBsBFxlI9HRjSjfOMsxMy/8QfHiZUxRddAhK8yqJ1h5052F/oXBPvFXm4TWPCnJrC/UuQ/XFq2MmCZUoiKDPiNXLKATNdkMkHBTtYbWl9H4yjHOg46aQUCKlhUBGqn+QJgX2Can5bb66wAu6ADLF16P3EAAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <span class="comment__likes-count">НРАВИТСЯ: 4</span>
+                    </div>
                 </blockquote>
             </div>
             <div class="gallery__block">
-                <img src="http://placehold.it/280x180" alt="Фото пользователя" class="gallery__photo ">
-                <blockquote class="gallery__comment">
-                    <span class="gallery__autor-container"><cite class="gallery__autor-name">Масим</cite>(40 часов назад)</span>
-                    <p class="gallery__comment-text">Где снег-то?</p>
+                <div class="gallery__photo-block">
+                    <img src="../img/photo-5-mobile.jpg" alt="Фото пользователя" class="gallery__photo">
+                </div>
+                <blockquote class="gallery__comment comment">
+                    <div class="comment__header">
+                        <div class="comment__username">Масим</div>
+                        <time class="comment__datetime" datetime="2020-07-17T01:27:44+03:00">(40 часов назад)</time>
+                    </div>
+                    <p class="comment__text">Где снег-то?</p>
+                    <div class="comment__likes">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="12" viewBox="0 0 13 12">
+                            <image id="icon-heart.svg_copy" data-name="icon-heart.svg copy" width="13" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA0ElEQVQokY2SzRHBcBDFfzIKSAmOjnRAB06u6CAqMCqgg9CBDqQDRgXpgA6YF2/NX8ZMvEsmu+8ju5vebTgHWAIbYMAbNXAEFq3aFjj0LSjdOPk5s0nUHilPSXcgB8bA1cSJRXKuXBsBFxlI9HRjSjfOMsxMy/8QfHiZUxRddAhK8yqJ1h5052F/oXBPvFXm4TWPCnJrC/UuQ/XFq2MmCZUoiKDPiNXLKATNdkMkHBTtYbWl9H4yjHOg46aQUCKlhUBGqn+QJgX2Can5bb66wAu6ADLF16P3EAAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <span class="comment__likes-count">НРАВИТСЯ: 150</span>
+                    </div>
                 </blockquote>
             </div>
             <div class="gallery__block">
-                <img src="http://placehold.it/280x180" alt="Фото пользователя" class="gallery__photo ">
-                <blockquote class="gallery__comment">
-                    <span class="gallery__autor-container"><cite class="gallery__autor-name">Надежда</cite>(45 часов назад)</span>
-                    <p class="gallery__comment-text">Всем GM и взаимные лайки!</p>
+                <div class="gallery__photo-block">
+                    <img src="../img/photo-6-mobile.jpg" alt="Фото пользователя" class="gallery__photo">
+                </div>
+                <blockquote class="gallery__comment comment">
+                    <div class="comment__header">
+                        <div class="comment__username">Надежда</div>
+                        <time class="comment__datetime" datetime="2020-07-17T01:27:44+03:00">(45 часов назад)</time>
+                    </div>
+                    <p class="comment__text">Всем GM и взаимные лайки!</p>
+                    <div class="comment__likes">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="12" viewBox="0 0 13 12">
+                            <image id="icon-heart.svg_copy" data-name="icon-heart.svg copy" width="13" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA0ElEQVQokY2SzRHBcBDFfzIKSAmOjnRAB06u6CAqMCqgg9CBDqQDRgXpgA6YF2/NX8ZMvEsmu+8ju5vebTgHWAIbYMAbNXAEFq3aFjj0LSjdOPk5s0nUHilPSXcgB8bA1cSJRXKuXBsBFxlI9HRjSjfOMsxMy/8QfHiZUxRddAhK8yqJ1h5052F/oXBPvFXm4TWPCnJrC/UuQ/XFq2MmCZUoiKDPiNXLKATNdkMkHBTtYbWl9H4yjHOg46aQUCKlhUBGqn+QJgX2Can5bb66wAu6ADLF16P3EAAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <span class="comment__likes-count">НРАВИТСЯ: 2560</span>
+                    </div>
                 </blockquote>
+            </div>
+            <div class="final-text">
+                <h3 class="final-text__heading">Затмите всех! <br>Выкладывайте все, что накопилось в телефоне!</h3>
             </div>  
         </section>
         
+
         <section class="photo-processing">
-            <h3 class="photo-processing__heading"></h3>
-            <div class="photo-processing__process-and-post">
-                <div class="photo-processing__result">
-                    <img src="http://placehold.it/280x375" alt="" class="photo-processing__result-image">
-                </div>
-                <div class="photo-processing__settings">
-                    <div></div>
-                    <div>
-                        <button class="button photo-processing__button-post">Запостить</button>
-                        <button class="button photo-processing__button-cancel">Отмена</button>
+            <div class="container">
+                <h3 class="photo-processing__heading visually-hidden">Выложить фото</h3>
+                <div class="photo-processing__process-and-post">
+                    <div class="photo-processing__result">
+                        <img src="../img/photo-processing.jpg" alt="Результат обработки" class="photo-processing__result-image">
+                    </div>
+                    <div class="photo-processing__settings">
+                        <div class="photo-processing__container">
+                            <a href="#" class="photo-processing__setting-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+                                    <image id="crop.svg" width="44" height="44" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAxElEQVRYhe2XzQ2DMAyFH4hB6I1x6IU9mIRR2llYoN2ECglxyCE2Pw8S9X2STyThk+VYTjE2HQym4HNhbWBS3vnzPUiYjYTZSJhNufTZWFhY+z3xAdDmlOEawMsjnVpJDNaC1IRra0HlmA2sOj46W3juyYraGhsJs5EwGwmzkTAbCbORMJvshKsEHDbN0yoJNn9Rw5veYGfjyfD3TsEQj3B/rVIcj/AbwDOVTHsv3Sz9WHrm2RESPV9tjY2E2UiYTV7CAH4+bSWyAe+pkgAAAABJRU5ErkJggg=="/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="photo-processing__container">
+                            <a href="#" class="photo-processing__setting-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="43" viewBox="0 0 48 43">
+                                    <defs>
+                                      <style>
+                                        .cls-1 {
+                                          opacity: 0.3;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <image id="fill.svg" class="cls-1" width="48" height="43" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAArCAYAAAA+EwvfAAABrklEQVRoge2YPW/CMBCG31ZlYaBDZ9a0Ujuw0KFLp4792yzM/QVdsrAwsLCgVD4pjXxn+84fIOWRkIgNyfskl8T23cv7F5RsADwC2AE4a3di5d4Qfg1gBeADwOKWBF5deKKphEbg11MyzSQ0Akem7ptIaO+Bq5HQCuBaJCwCcBJ7T3s1CavAEPCN6asiYRFYuIAr4TfFJbQCXPhz7XtCIyCF39W+sVMFQuGPtZ9OKQIx4YlqErECKeGJKhIxAprwRHGJkIAlPFFUQhLIEZ4oJiEJbDOFJySJrWJ/f0gCT5NtS3iCk5geK5qHhN8Ol/nTEL4I0hU4VMyhPpYksDeWSyzckDwKSSBHzYfg7omN+wQJvQdKSnDhn92qx9p9F4l5E5eQkJ5G3Wi7Cz2hYsdCOSW48GDKRiyllNFoyfcAXMksPe3LyULaP1LnAyXexETHtEPq08zIco6FxvjOPsH2aefEOUajWbCsSljmAz5Omj7rupBmRsbxo+mzCowlxuOZg6JsejekGJ/tk2vruT+ljEYlSMJKL4X1keMKNGUWaM0s0JrhKfR9ywJzCTUFwAUTepi95+exTgAAAABJRU5ErkJggg=="/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="photo-processing__container">
+                            <a href="#" class="photo-processing__setting-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+                                    <defs>
+                                      <style>
+                                        .cls-1 {
+                                          opacity: 0.3;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <image id="contrast.svg" class="cls-1" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVRYhb1XsU7DMBQ8AhESQxjCUIQqoSIKYysEAwML4sPLwAhdGOjQpUOzRAiEWCIh5OoeMq/PTkgjTvIS23dnv2f7Zev86g4NkQE4BJCzWSjZlgDem9DuNBjTBzCggTqIuSENzAEs2hrYAzCKrLYOGee7BUwBfFrjkwBJD8DNBuI+cnL1rE5rB/p0HkLBOL+p/n2KWUIpgEvuxK+QaAO9iPiMMa0C/SX7U+bM0Bgz4vxCPvgh2AuIu2SaAHiJiPuoOHYSOAkjaq0ZGNG9Fn+oOVLXbGc+cWRu6i9UDPSNhBOCulX7R+9WLaQKmMip+WNgYBA/NdxyjT6zXu6NilwaAzGQGZfMrOlNFoALxdjbiXdy+ljpJrxeNeYbiAsydRIszsPEiH3RcustDFQ+FGpMbhkoOxIX+BeT5s6tq1jfcJsii3GH3oIusR/j+g8D0Xz6DwPR42wZiG5ZC/hxX+NOrMzsUPxTHb21E2cZ6BmPUls8e/NSo1ZYGVga5Nbb8Fcs1OotzmXCJNGJMmxYhIYwZ/Uj0NcyRFeS0Lqnxy1CUfL51Vs/NsauNKUkWxg1QcZCo64mmDHZSqPyTcmhd7OU2tA/hlNDKAsQ+HghmRYPza388GwfHJ34HR8AjtSEXQDHALYYt6+IGVn1KYALztV4BPAq33RVXNCdVZwO2dqU5YKpfpKt/4IFd8MqUkGBmIiFyhJ3CL0FbuB9R7VBSa41cYfYv6FLKncC/vJz6sPli0tQU7iJAYELiWvd/54D+AYEIIkjOti1eAAAAABJRU5ErkJggg=="/>
+                                  </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <button class="button photo-processing__button-post">Запостить</button>
+                            <button class="button photo-processing__button-cancel">Отмена</button>
+                        </div>
                     </div>
                 </div>
             </div>

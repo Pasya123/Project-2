@@ -1,0 +1,18 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "vars";
+@import "fonts";
+
+html{
+    box-sizing: border-box;
+  }
+  *,*::after,*::before{
+    box-sizing: inherit;
+  }
+  
+  h1,h2,h3,h4,h5,h6{
+    margin: 0;
+  }
+
+  body{
+    background-color: blue($color: #000000);
+}

@@ -1,4 +1,6 @@
 @import "../../node_modules/normalize.css/normalize";
+@import "vars";
+@import "fonts";
     
 html{
     box-sizing: border-box;
@@ -7,6 +9,254 @@ html{
     box-sizing: inherit;
 }
 
-.header{
-	backround-color: #ccc;
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+  ul,
+  li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: "OpenSans-Regular", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.container{
+    padding: 0 20px;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+// Main page styles
+//
+// Header styles
+
+.page-header{
+    position: absolute;
+    min-width: 320px;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.menu__list{
+    display: none;
+}
+
+// Download styles
+
+.download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $sub-bg;
+    color: #fff;
+    &__link{
+        font-family: "OpenSans-Bold", "Arial", "sans-serif";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    &__logo-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__info{
+        font-family: "OpenSans-Light", "Arial", "sans-serif";
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+}
+
+// About styles
+
+.about{
+    &__intro{
+        font-family: "OpenSans-Light", "Arial", "sans-serif";
+        font-weight: 300;
+        font-size: 24px;
+        color: $sub-bg;
+    }
+    &__slogan{
+        font-family: "OpenSans-Bold", "Arial", "sans-serif";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    &__article{
+        color: $sub-bg;
+    }
+}
+
+// Reviews styles
+ 
+.reviews{
+    &__author-name{
+        font-family: "OpenSans-Bold", "Arial", "sans-serif";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &__text{
+        font-family: "OpenSans-Regular", "Arial", "sans-serif";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        color: $sub-accent;
+    }
+}
+
+// Prises styles
+
+.prices{
+    &__rate{
+        background-color: $sub-accent;
+        color: #fff;
+    }
+    &__field{
+        font-family: "OpenSans-Regular", "Arial", "sans-serif";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+}
+
+// Footer styles
+
+.contacts{
+    font-family: "OpenSans-Light", "Arial", "sans-serif";
+    font-weight: 300;
+    font-size: 24px;
+    color: $sub-accent;
+    &__title{
+        font-family: "OpenSans-Bold", "Arial", "sans-serif";
+        font-weight: 700;
+        font-size: 18px;
+    }
+    a{
+        color: $accent;
+        text-decoration: none;
+    }
+}
+
+
+
+// Photo-page styles
+
+.gallery-intro{
+    min-width: 320px;
+    &__background{
+        background-color: $sub-accent;
+        background-image: url(../img/back-mobile.png);
+        background-size: cover;
+        color: #fff;
+        min-height: 237px;
+    }
+    &__heading{
+        font-family: "OpenSans-Light", "Arial", "sans-serif";
+        font-weight: 300;
+        font-size: 24px;
+        max-width: 243px;
+        margin: 0 auto;
+        padding: 100px 25px;
+        text-align: center;
+    }
+    &__text{
+        font-family: "OpenSans-Regular", "Arial", "sans-serif";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        padding: 0 15px;
+        margin: 50px 0;
+    }
+}
+
+
+// Gallery styles
+
+.gallery{
+    &__photo-block{
+        margin-bottom: 0;
+    }
+    blockquote:nth-last-type(1){
+        margin-bottom: 0;
+    }
+}
+
+.comment{
+    background-color: #f2f2f2;
+    margin: 0 20px 20px;
+    padding: 18px;
+    color: $sub-accent;
+    &__header{
+        display: flex;
+    }
+    &__username{
+        font-family: "OpenSans-Bold", "Arial", "sans-serif";
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        margin-right: 3px;
+    }
+    &__datetime{
+        font-family: "OpenSans-Light", "Arial", "sans-serif";
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    &__likes{
+        color: $accent;
+    }
+    &__likes-count{
+        margin-left: 17px;
+    }
+}
+
+.final-text__heading{
+    font-family: "OpenSans-Regular", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    padding: 50px 10px;
+}
+
+// Photo processing styles
+
+.photo-processing{
+    background-color: #f2f2f2;
+    &__settings{
+        display: flex;
+    }
 }

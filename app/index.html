@@ -9,37 +9,59 @@
 <body>
     
     <header class="page-header">
-        <a href="" class="page-header__logo-link">PINK</a>
-        <button class="page-header__button-close button">Свернуть меню</button>
-        <nav class="main-nav">
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                    <a href="index.html">Главная</a>
-                </li>
-                <li class="site-list__item">
-                    <a href="photo.html">Фотографии</a>
-                </li>
-                <li class="site-list__item">
-                    <a href="form.html">Конкурс</a>
-                </li>
-                <li class="site-list__item">
-                    <a href="#">Портфолио</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="page-header__inner">
+                <div class="logo">
+                    <a href="" class="page-header__logo-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="22" viewBox="0 0 75 22">
+                            <image id="logotype-white-mobile.svg" width="75" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAWCAYAAACIXmHDAAACr0lEQVRYhdVZi3HbMAwFeh3AG9TdIJmg8QSNJ6g9Qe0J0kygdAKrE8QbOBvInSDqBPEGrwcbdCFaoiSKytXvLnfWhyDxCDwCEQHYoRsKAM8AFgAmFIA8B/CmVu+b3lSbglcA05DNhvFTM89d7DsB+zcVPzoS5eOthYQ7M+BH4D2Lom0TYuaR+13WUjPOEnUc+9E8L4noV8PYT0R0o38CcUqibMnMeR8HAxDbGREtE9mLhhBFRDv1U7AnoqcKWcwcZF5TRRxyUbUBIONeEq1TUvxP2zrGRANRM2Y+fOgzLzMLMXMistH0PcHaS/P7IZTiY6KGqK0jSi56kWWwNr9TOFZ66bfRhb8baojKJTAcURRLlho4p15fYW6wmZuIdZo42G4XNBB1oZ2xkTUKdIFuE6bqwKjoStRQss5pYkM1AeZGw+T43oxFlmpjJ6IoliwAKzNBqpPwCCVeCHMbICfkIuUcdPJBbD4bPx5DRFEMWUpUZm499l5pC5h5XyP4varvEJQoP2K/tmmkrbMmLQuSZ99USxzyhDVWBcy8BSAb8aD3RfBvpXwZYreGqFJ9ctp1Gxoci1Ab07fdaRRy0aymliii3SlQxaKmrWnUyL5pWOrx/vkdq+y1VtGkuz9E8N2hJHooUZprys/NOwuVmgvYNNx7xaaPcmgKxEAEH8CMiF5VjO8BZMwcWmsIB63K3QbIHC/S55qNyAAc/L7XknUYS3+GwhBWqKkVgN9em9QFF0Q5CDEAvkhk6S0hbG/f/a+K0hBqTsjM1nod8bOOKActHbZ6KVG8s/9nuxqy6F9L9KSXE6+ESYWl0chK23VVZNGJsHXqQtiz7xfF50Pl6shSzM3uJ4ceZDNj93ioXCVZuvtLs/tjzOFr5Mp+NEhWN0V8sIiaW2yP+cFCx5+KWqD4Cwkc6Iy9EZq9AAAAAElFTkSuQmCC"/>
+                        </svg>
+                    </a>
+                </div>
+                <nav class="menu">
+                    <button class="page-header__button-close button">Свернуть меню</button>
+                    <ul class="menu__list site-list">
+                        <li class="site-list__item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="photo.html">Фотографии</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="form.html">Конкурс</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="#">Портфолио</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     
     <main class="page-main">
        
         <h1 class="visually-hidden">Приложение PINK</h1>
         
+        <img src="img/phone-in-hand.png" alt="Приложение PINK">
+
         <section class="download">
             <h2 class="visually-hidden">Где скачать наше приложение</h2>
-            <a class="download__download-link"></a>
-            <img src="http://placehold.it/50x50" alt="" class="download__brands-image download__brands-image--apple">
-            <img src="http://placehold.it/50x50" alt="" class="download__brands-image download__brands-image--android">
-            <img src="http://placehold.it/50x50" alt="" class="download__brands-image download__brands-image--windows">
-            <p class="download-section__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            <a class="download__link">
+                Скачать приложение
+            </a>
+            <div class="download__logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="56" viewBox="0 0 47 56">
+                    <image id="apple-logo.svg" width="47" height="56" alt="apple" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAA4CAYAAABt9KGPAAACiUlEQVRoge2Zi23CMBCGfVEHoBO03QAmKNmAEegEbSeATkA7AWwATACdADYgnSB0gqsOziEktnEgii9SPylCIsj5Y873VCFBxCEizvFEP6ggH1h0imXkikfEDiKuDKI1HQEyyyBi17LbmlSa5gO84zuHcGIqQGqZwqG0MZCmm4QPPITvBEgtg4gbD/HyvAwf0ktMBEgtg4jjVh5SdRTv8ulyhSu7eHKZtXiWuzoW8WCvlForpZYAMKtrUajyY0R8VErRpb0DidrSBQD7K9bq83oP/PUPf64BYF1lPetDyCN4RMg5J1zW/ITXevN0n3rN6m6UQ/rE8yF5KH+Z6ojJgoupb1Xo7HR9hXc9drppaFOGl4Tbcm0pZC8ABeH012wq21jzxHSgo5xwOmirFgjf86Wi3JcU8WRWMifILT8BAH0ezYbdkfRd37K5ZPFE7/xrOE1eJEXhBLCty6wfT8SmiEs7L6/8OmdmSxVI/HNAYT582X5D4v3CbhgS7VnaKH7huhm5bgrgt83infyLD4V08U43ThEWm9NyFfe2+jjiql4y1gwg0rmxYEYu8d/CxVMBPzbdiDhPls7IVHzrYiRtQRVFvOQ7btpVSj+0mmnehLT4ZVBJ1RhxT2mozYZMZtcS08k47DwHAWf6KZBF1nTirq3MwZaZOMttACBp0cFNzjpmzEcwOdUw6+T2tGSy5lhpMsK2vxHsebIeTimfZ9uXaj6f+R6OdSbFf4+kyTRtai+f27vESwtcvWIPx1oG8hvGjci6zLur+WSFxzwhuW1SfsMLpDzJu3Y4V8+I33PQdjbGNKzR5/Goz8DOWD3d8gJUkpG44sNpd2k47HW4ecZrms3ql6dY40Yp9QcXxXEmrW7vKQAAAABJRU5ErkJggg=="/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="47" viewBox="0 0 43 47">
+                    <image id="android-logo.svg" width="43" height="47" alt="android" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAvCAYAAAB6zDPWAAACSElEQVRYhe2Zz1EbMRSHf/ZQwFJBTAfhaF1iKgDfdbArAFcAVACpwBx8j6kAc7GOoQNMBWwHyTzmKd55I63eJtaGg76ZPXj/SJ/W0pP2aYAEq+14BODJGneivJcOz84at1M89wrgLHVvUpYLWwJ4s8bdiPMVgAsA5wAmAKrA4zWADYBHAGtrXC3KoDK/WOPmKQ+tLEn89K3n39cAZhHBGCS6BrAgaf+vATiVjfhrWRa+AvANwDOLdpGUkNitL88ad695SC3Lwu//KCmprXHH2puH2htX2/FdQPSBDw0v/Dabf3fF5arQ9tkJ960mG2vcGfYDcJYo5pj7KQ3IH+IajYVNyuNI2ahl4NyIBxo4EqSY8OD6Gik/GRo1cTb0JnIwtcat28rV9NnzHkRV9WhkR4p7DkGyHo2spj8egr7q6QfNAOutxanwpQldMr7mpPXlfcjygmLmFxqaZV1u2OmCZ80HchqstuOZCPokPPcxb7Ud/+pL0Bo3wD62L8X0PqdoIOfmKnCub0LrkLthZBXVV2yNEaq/Uq+6PgNFNhdFNhdFNhdFNhdFNhdFNhdDTkdKVImyjITq35DslPNVNR/31rjF/zTl+kl4x07kN9V8MD719Jn8J3cWQ9NnFyLzl4Oa62lFm0WkZNpl4wNOsuMjhtxr8PhM+Hdr3MtBZBvSsS5xK/cbxHM3nC2XJP/6JiXO5qLI5qLI5qKr7KETdp3K6yr7GDnfunHRcj1WXpBOspxZpI03j884ts4+fJ02kpvTNk0kqUbuAfAbybS3FdGC4nAAAAAASUVORK5CYII="/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="41" viewBox="0 0 44 41">
+                    <image id="microsoft-logo.svg" width="44" height="41" alt="windows" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAApCAYAAABOScuyAAAAkklEQVRYhe3UoQ3CYBRF4fsTBqjBYtAM0R1gHiDpNjACkg3QNUxQi4KUhA3eEU3ON8DNES+vTYfdJ8W629jmxeHRl2+vqgdpBtMMphlMM5hmMM1gmsE0g2mLC14nuYD75PYytP31da4ufR63v833fVO+PZ/EqXo0yT+0fNsvQTOYZjDNYJrBNINpBtMMphmMSvIFSz0Ppf61ISYAAAAASUVORK5CYII="/>
+                </svg>
+            </div>
+            <p class="download__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </section>
         
         <section class="about">
@@ -48,9 +70,9 @@
                 <p class="about__intro">Устали от серости мегаполиса?</p>
                 <p class="about__intro">Нам есть, что вам предложить!</p>
             </header>
-            <b class="about__slogan">Поднимает настроение</b>
+            <h3 class="about__slogan">Поднимает настроение</h3>
             <p class="about__article">Приложение подзволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            <b class="about__slogan">Меняет мир вокруг</b>
+            <h3 class="about__slogan">Меняет мир вокруг</h3>
             <p class="about__article">Сделайте снимок и украсьте его смаликом или текстовой подписью, чтобы усилить эффект</p>
             <h3 class="about__slogan">Заводит новых друзей</h3>
             <p class="about__article">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
@@ -110,15 +132,15 @@
                                 <th class="prices__rate prices__rate--hit">Стандарт 3,99 USD</th>
                             </tr>
                             <tr>
-                                <td class="prices__field"></td>
+                                <td class="prices__field">Розовый фильтр</td>
                                 <td class="prices__value"></td>
                             </tr>
                             <tr>
-                                <td class="prices__field"></td>
+                                <td class="prices__field">Смайлики</td>
                                 <td class="prices__value"></td>
                             </tr>
                             <tr>
-                                <td class="prices__field"></td>
+                                <td class="prices__field">Комментарии</td>
                                 <td class="prices__value"></td>
                             </tr>
                         </table>
