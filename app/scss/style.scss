@@ -50,12 +50,13 @@ body{
 
 .page-header{
     position: absolute;
-    min-width: 320px;
+    width: 100%;
     background-color: rgba($color: #000000, $alpha: 0.3);
     &__inner{
         display: flex;
         justify-content: space-between;
-        padding: 20px 0;
+        align-items: center;
+        min-height: 66px;
     }
     a{
         text-transform: uppercase;
@@ -172,7 +173,7 @@ body{
 
 // Photo-page styles
 
-.gallery-intro{
+.intro{
     min-width: 320px;
     &__background{
         background-color: $sub-accent;
@@ -187,7 +188,7 @@ body{
         font-size: 24px;
         max-width: 243px;
         margin: 0 auto;
-        padding: 100px 25px;
+        padding-top: calc(50% - 62px);
         text-align: center;
     }
     &__text{
@@ -195,6 +196,7 @@ body{
         font-weight: 400;
         font-size: 14px;
         line-height: 30px;
+        color: $sub-accent;
         text-align: center;
         padding: 0 15px;
         margin: 50px 0;
@@ -259,4 +261,75 @@ body{
     &__settings{
         display: flex;
     }
+}
+
+
+// Form styles
+
+.competiton-form__bg-container{
+    background-color: $bg-color;
+}
+
+.competition-form__list{
+    display: flex;
+    label{
+        font-family: "OpenSans-Regular", "Arial", "sans-serif";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        color: $accent;
+        text-transform: uppercase;
+    }
+}
+
+.form-legend{
+        font-family: "OpenSans-Regular", "Arial", "sans-serif";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $accent;
+}
+
+.post-form{
+    label{
+        font-family: "OpenSans-Regular", "Arial", "sans-serif";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $accent;
+    }
+}
+
+.achieve-form__list .form-list__item{
+    font-family: "OpenSans-Regular", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $sub-accent;
+}
+
+.contacts-form__list .form-list__item{
+    font-family: "OpenSans-Regular", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $accent;
+}
+
+.radio-form__list .form-list__item{
+    font-family: "OpenSans-Regular", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $sub-accent;
+}
+
+.form-sect__legend sup{
+    color: $accent;
 }
