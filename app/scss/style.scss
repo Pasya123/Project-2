@@ -30,6 +30,7 @@ body{
 }
 
 .container{
+    width: auto;
     padding: 0 20px;
 }
 
@@ -65,6 +66,27 @@ body{
     }
 }
 
+.menu__btn{
+    width: 50px;
+    height: 24px;
+    border: none;
+    outline: none;
+    background-color: rgba($color: #000, $alpha: 0.0);
+    border-width: 0;
+    color: #fff;
+    position: relative;
+    &::after{
+        content: "";
+        width: 50px;
+        height: 4px;
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        top: 0px;
+        box-shadow: 0 10px 0 0 #fff, 0 20px 0 0 #fff;
+    }
+}
+
 .menu__list{
     display: none;
 }
@@ -72,29 +94,91 @@ body{
 // Download styles
 
 .download{
+    min-height: 730px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(../img/phone-in-hand.png);
+    background-repeat: no-repeat;
     background-color: $sub-bg;
     color: #fff;
+    &__inner{
+        width: 280px;
+        margin: 0 auto;
+        margin-top: 490px;
+    }
+    &__title{
+        display: none;
+        font-family: "OpenSans-Light", "Arial", "sans-serif";
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 36px;
+        text-align: center;
+    }
     &__link{
+        width: auto;
+        display: block;
+        padding: 20px 35px;
+        margin-bottom: 30px;
         font-family: "OpenSans-Bold", "Arial", "sans-serif";
         font-weight: 700;
         font-size: 18px;
         line-height: 18px;
+        text-align: center;
+        border: 3px solid #fff;
+        border-radius: 35px;
     }
     &__logo-container{
         display: flex;
         justify-content: space-around;
+        align-items: center;
+        margin-bottom: 25px;
     }
     &__info{
         font-family: "OpenSans-Light", "Arial", "sans-serif";
         font-weight: 300;
         font-size: 14px;
         line-height: 24px;
+        text-align: center;
+        margin: 0;
     }
     
 }
+
+@media (min-width: 659px){
+    .download{
+        &__inner{
+            width: 300px;
+            margin-top: 200px;
+            margin-right: auto;
+            margin-left: 20px;
+            
+        }
+        &__title{
+            display: block;
+            margin-bottom: 35px;
+        }
+        &__info{
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 1199px){
+    .download{
+        min-height: 850px;
+        &__inner{
+            margin-top: 220px;
+            margin-left: 130px;
+        }
+        &__title{
+            font-size: 50px;
+            margin-bottom: 55px;
+        }
+    }
+}
+
+
 
 // About styles
 
@@ -105,6 +189,10 @@ body{
         font-size: 24px;
         color: $sub-bg;
     }
+    &__wrapper{
+    display: flex;
+    flex-direction: column;
+    }
     &__slogan{
         font-family: "OpenSans-Bold", "Arial", "sans-serif";
         font-weight: 700;
@@ -114,11 +202,89 @@ body{
     &__article{
         color: $sub-bg;
     }
+    &__img-container{
+        order: 1;
+        display: flex;
+    }
+    &__text-container{
+        display: flex;
+        flex-direction: column;
+    }
+    &__image2{
+        display: none;
+    }
+    &__image3{
+        display: none;
+    }
+    &__joke{
+        display: none;
+    }
+}
+
+.joke{
+    &__img{
+    display: block;
+    height: 277px;
+    width: 240px;
+    background-image: url(../img/timer.png);
+    background-repeat: no-repeat;
+    }
+    &__title{
+        font-family: "OpenSans-Bold", "Arial", "sans-serif";
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    &__link{
+        color: $accent;
+    }
+    &__article{
+        color: $sub-bg;
+    }
+}
+
+@media (min-width: 659px){
+    .about{
+        &__wrapper{
+            flex-direction: row;
+        }
+        &__img-container{
+            order: 0;
+        }
+        &__joke{
+            display: flex;
+        }
+    }
+}
+
+@media (min-width: 1199px){
+    .about{
+        &__image2{
+            display: block;
+        }
+        &__image3{
+            display: block;
+        }
+        &__img-container{
+            justify-content: space-around;
+        }
+        &__text-container{
+            flex-direction: row;
+        }
+        &__wrapper{
+            flex-direction: column;
+            }
+    }
 }
 
 // Reviews styles
  
 .reviews{
+    text-align: center;
+    &__item{
+        display: flex;
+        flex-direction: column;
+    }
     &__author-name{
         font-family: "OpenSans-Bold", "Arial", "sans-serif";
         font-weight: 700;
@@ -133,7 +299,22 @@ body{
         text-align: center;
         color: $sub-accent;
     }
+    &__author-data{
+        display: none;
+    }
 }
+
+@media (min-width: 659px){
+    .reviews{
+        &__author-data{
+        display: block;
+        }
+        &__author-wrapper{
+            order: 2;
+        }
+    }
+}
+
 
 // Prises styles
 
@@ -151,14 +332,28 @@ body{
     }
 }
 
-// Footer styles
+// Contacts styles
 
 .contacts{
+    &__wrapper{
+        //min-width: 260px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        outline: 1px green solid;
+        margin: 0 auto;
+    }
+    &__wrapper-inner{
+        width: 245px;
+        text-align: center;
+        outline: 1px red solid;
+    }
     font-family: "OpenSans-Light", "Arial", "sans-serif";
     font-weight: 300;
     font-size: 24px;
     color: $sub-accent;
     &__title{
+        display: block;
         font-family: "OpenSans-Bold", "Arial", "sans-serif";
         font-weight: 700;
         font-size: 18px;
@@ -169,6 +364,27 @@ body{
     }
 }
 
+@media (min-width: 659px){
+    .contacts{
+        &__wrapper{
+            width: 610px;
+        }
+    }
+}
+
+@media (min-width: 1199px){
+    .contacts{
+        &__wrapper{
+            width: 880px;
+        }
+    }
+}
+
+// Footer styles
+
+.footer{
+    display: none;
+}
 
 
 // Photo-page styles
@@ -272,6 +488,7 @@ body{
 
 .competition-form__list{
     display: flex;
+    flex-wrap: wrap;
     label{
         font-family: "OpenSans-Regular", "Arial", "sans-serif";
         font-weight: 400;

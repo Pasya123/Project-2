@@ -19,6 +19,7 @@ gulp.task('sass', function(){
 gulp.task('autoprefixer', function(){
     return gulp.src('app/css/**/*.css')
         .pipe(autoprefixer({
+			overrideBrowserslist: ['last 5 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('app/css'))
