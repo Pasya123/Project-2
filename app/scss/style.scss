@@ -13,6 +13,11 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
 }
 
+blockquote{
+    margin: 0;
+    padding: 0;
+}
+
   ul,
   li{
     margin: 0;
@@ -34,6 +39,14 @@ body{
     padding: 0 20px;
 }
 
+@media (min-width: 1199px){
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 130px;
+    }
+}
+
 .visually-hidden{
     position: absolute;
     width: 1px;
@@ -47,6 +60,22 @@ body{
 
 // Main page styles
 //
+//Button styles
+
+.button{
+    display: block;
+    padding: 15px 35px;
+    font-family: "OpenSans-Bold", "Arial", "sans-serif";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    border: 3px solid #fff;
+    border-radius: 35px;
+}
+
+
+
 // Header styles
 
 .page-header{
@@ -117,16 +146,8 @@ body{
     }
     &__link{
         width: auto;
-        display: block;
-        padding: 20px 35px;
         margin-bottom: 30px;
-        font-family: "OpenSans-Bold", "Arial", "sans-serif";
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 18px;
-        text-align: center;
         border: 3px solid #fff;
-        border-radius: 35px;
     }
     &__logo-container{
         display: flex;
@@ -183,6 +204,9 @@ body{
 // About styles
 
 .about{
+    &__header{
+        text-align: center;
+    }
     &__intro{
         font-family: "OpenSans-Light", "Arial", "sans-serif";
         font-weight: 300;
@@ -205,6 +229,9 @@ body{
     &__img-container{
         order: 1;
         display: flex;
+    }
+    &__text-wrapper{
+        text-align: center;
     }
     &__text-container{
         display: flex;
@@ -251,6 +278,9 @@ body{
         &__img-container{
             order: 0;
         }
+        &__text-wrapper{
+            text-align: left;
+        }
         &__joke{
             display: flex;
         }
@@ -270,6 +300,9 @@ body{
         }
         &__text-container{
             flex-direction: row;
+        }
+        &__text-wrapper{
+            text-align: center;
         }
         &__wrapper{
             flex-direction: column;
@@ -340,13 +373,11 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        outline: 1px green solid;
         margin: 0 auto;
     }
     &__wrapper-inner{
         width: 245px;
         text-align: center;
-        outline: 1px red solid;
     }
     font-family: "OpenSans-Light", "Arial", "sans-serif";
     font-weight: 300;
@@ -383,11 +414,27 @@ body{
 // Footer styles
 
 .footer{
-    display: none;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 659px){
+    .footer{
+        &__wrapper{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }
 
 
+
 // Photo-page styles
+//------------------------------------------------------------------------------------//
+//
 
 .intro{
     min-width: 320px;
@@ -423,19 +470,72 @@ body{
 // Gallery styles
 
 .gallery{
+    & .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__block{
+        width: 280px;
+    }
+    &__block--of-the-day{
+        width: auto;
+        //margin-left: 20px;
+        //margin-right: 20px;
+    }
     &__photo-block{
         margin-bottom: 0;
+        padding: 0;
+        width: 280px;
+        height: 180px;
+        outline: 1px red solid;
+    }
+    &__photo-block--of-the-day{
+        width: auto;
+        height: 137px;
+        outline: 1px black dashed;
+    }
+    &__photo{
+        display: block;
+    }
+    &__photo--of-the-day{
+        display: inline-block;
     }
     blockquote:nth-last-type(1){
         margin-bottom: 0;
+    }
+    
+}
+
+@media (min-width: 659px){
+    .gallery{
+        &__block{
+            width: 300px;
+        }
+        &__photo-block{
+            width: 300px;
+            height: 300px;
+        }
+        &__photo-block--of-the-day{
+            width: auto;
+            height: 509px;
+        }
+        &__block--of-the-day{
+            width: auto;
+        }
     }
 }
 
 .comment{
     background-color: #f2f2f2;
-    margin: 0 20px 20px;
+    margin-bottom: 20px;
     padding: 18px;
     color: $sub-accent;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
     &__header{
         display: flex;
     }
@@ -453,11 +553,33 @@ body{
         line-height: 24px;
         text-transform: uppercase;
     }
+    &__text{
+        display: inline-block;
+        margin-bottom: auto;
+    }
     &__likes{
         color: $accent;
+        margin-top: auto;
     }
     &__likes-count{
         margin-left: 17px;
+    }
+}
+
+@media (min-width: 659px){
+    .comment{
+        min-height: 155px;
+        &__likes{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__likes-count{
+            margin-left: 0;
+            
+        }
+        &__likes-img{
+            order: 2;
+        }
     }
 }
 
@@ -476,19 +598,114 @@ body{
     background-color: #f2f2f2;
     &__settings{
         display: flex;
+        flex-direction: column;
+    }
+    &__stting-btn{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    &__overwrapper{
+        //display: flex;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__button{
+        width: 275px;
+    }
+    &__button--active{
+        border: 3px solid $accent;
+        color: $accent;
+    }
+    &__button--inactive{
+        border: 3px solid #dddfe0;
+        color: #dddfe0;
+    }
+}
+
+@media (min-width: 659px){
+    .photo-processing{
+        &__overwrapper{
+            display: flex;
+        }
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__process-and-post{
+            display: flex;
+        }
+    }
+}
+
+// Photo processing toogle styles
+
+.range-filter{
+    width: 240px;
+    &__scale{
+        height: 2px;
+        background: #000;
+    }
+    &__controls{
+        position: relative;
+        height: 15px;
+    }
+    &__toggle{
+        position: absolute;
+        top: -4px;
+        left: 0;
+        //padding: 0;
+        width: 10px;
+        height: 10px;
+        border: 2px solid $accent;
+        background: #fff;
+        background-color: #f2f2f2;;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+.change-color{
+    &__range-filter{
+        display: none;
+    }
+}
+
+.change-brightless{
+    &__range-filter{
+        display: none;
+    }
+}
+
+@media (min-width: 659px){
+    .change-color{
+        &__range-filter{
+            display: block;
+        }
+    }
+    
+    .change-brightless{
+        &__range-filter{
+            display: block;
+        }
     }
 }
 
 
-// Form styles
+// Form page styles
+//--------------------------------------------------------------------------------------------------
+//
 
-.competiton-form__bg-container{
-    background-color: $bg-color;
-}
 
-.competition-form__list{
+.competition-form{
+    &__list{
     display: flex;
     flex-wrap: wrap;
+    }
+    &__bg-container{
+        background-color: $bg-color;
+    }
     label{
         font-family: "OpenSans-Regular", "Arial", "sans-serif";
         font-weight: 400;
@@ -500,13 +717,13 @@ body{
 }
 
 .form-legend{
-        font-family: "OpenSans-Regular", "Arial", "sans-serif";
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 18px;
-        text-transform: uppercase;
-        text-align: center;
-        color: $accent;
+    font-family: "OpenSans-Regular", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $accent;
 }
 
 .post-form{
@@ -547,6 +764,54 @@ body{
     color: $sub-accent;
 }
 
-.form-sect__legend sup{
+.form-sect{
+    &__legend sup{
     color: $accent;
+    }
+}
+
+.competition-form{
+    display: flex;
+    flex-direction: column;
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 659px){
+    .competition-form{
+        &__radio-form{
+            order: 1;
+        }
+        &__contacts-form{
+            order: 2;
+        }
+        &__checkbox-form{
+            order: 3;
+        }
+        &__post-form{
+            order: 4;
+        }
+    }
+    .filter-button{
+        order: 5;
+    }
+}
+
+@media (min-width: 1199px){
+    .competition-form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__name-form,
+        &__radio-form{
+            width: 435px;
+        }
+        &__contacts-form,
+        &__checkbox-form,
+        &__post-form{
+            flex-basis: 100%;
+        }
+    }
 }
