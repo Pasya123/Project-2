@@ -4,7 +4,8 @@ let gulp = require('gulp'), // обьявляем переменную само�
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    gulpStylelint = require('gulp-stylelint');
 
 
 gulp.task('sass', function(){
@@ -15,6 +16,14 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('app/css')) // указываем куда перемещать компилированные в .css файлы
         .pipe(browserSync.reload({stream: true})) // обновляет локальный сервер при выполнении таска
 });
+
+//gulp.task('lintCss', function(){
+//    return gulp
+ //       .src('app/scss/**/*.scss')
+ //       .pipe(gulpStylelint
+ //           ({reporters: [{formatter: 'string', console: true}]
+ //       }));
+//}
 
 gulp.task('autoprefixer', function(){
     return gulp.src('app/css/**/*.css')
@@ -61,3 +70,6 @@ gulp.task('watch', function(){
 });
 
 gulp.task('default', gulp.parallel('sass', 'autoprefixer', 'js', 'browser-sync', 'watch')) // стандартный таск (вызывающийся командой 'gulp'), выполняющий таски: sass, js, browser-sync, watch, autoprefixer
+
+//gulp.task('lintCss', gulp.parallel('lintCss'))
+//exports.lintCss = lintCss;
